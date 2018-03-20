@@ -1,0 +1,36 @@
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.box {
+  width: 960px;
+  text-align: center; }
+  .box .title {
+    text-align: center; }
+  .box .question-grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 2%;
+    grid-row-gap: 1rem; }
+    .box .question-grid .title {
+      margin: .5rem; }
+    .box .question-grid .control {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: .5rem;
+      grid-row-gap: .5rem; }
+      .box .question-grid .control .radio {
+        margin-left: 0; }
+        .box .question-grid .control .radio input {
+          margin-right: .5rem; }
+  .box .button {
+    margin: 2rem 0 1rem; }

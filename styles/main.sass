@@ -1,0 +1,37 @@
+body
+  min-height: 100vh
+  width: 100vw
+  display: flex
+  justify-content: center
+  align-items: center
+
+.box
+  width: 960px
+  text-align: center
+
+  .title
+    text-align: center
+
+  .question-grid
+    display: grid
+    grid-template-columns: 49% 49%
+    grid-column-gap: 2%
+    grid-row-gap: 1rem
+
+    .title
+      margin: .5rem
+
+    .control
+      display: grid
+      grid-template-columns: auto auto
+      grid-column-gap: .5rem
+      grid-row-gap: .5rem
+
+      .radio
+        margin-left: 0
+
+        input
+          margin-right: .5rem
+
+  .button
+    margin: 2rem 0 1rem
