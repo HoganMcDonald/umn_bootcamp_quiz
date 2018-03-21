@@ -15,15 +15,15 @@ const questions = [
     userGuess: ''
   },
   {
-    question: 'Inside which HTML element do we put the JavaScript?',
-    options: ['javascript', 'script', 'scripting', 'js'],
-    correctAnswer: 'script',
+    question: 'How do you write "Hello World" in an alert box?',
+    options: ['alert(\'Hello World\')', 'msgBox(\'Hello World\')', 'msg(\'Hello World\')', 'alertBox(\'Hello World\')'],
+    correctAnswer: 'alert(\'Hello World\')',
     userGuess: ''
   },
   {
-    question: 'What is the correct syntax for referring to an external script called "xxx.js"?',
-    options: ['script src= xxx.js ', 'script name= xxx.js ', 'script href= xxx.js '],
-    correctAnswer: 'script src= xxx.js ',
+    question: 'How do you create a function in JavaScript?',
+    options: ['function:myFunction()', 'function myFunction()', 'function = myFunction()'],
+    correctAnswer: 'function myFunction()',
     userGuess: ''
   }
 ]
@@ -31,8 +31,6 @@ const questions = [
 
 // evaluates how many questions were correct
 function evaluate(questionArray) {
-
-  // javascript 30 - Wes Bos
 
   return questionArray
     .map(function(question) {
@@ -52,9 +50,6 @@ $('#questions').on('click', '.radio-input', function() {
 }); // radio-input handler
 
 
-
-
-
 // don't worry about code below as much, but feel free to check it out
 
 // renders questions to the page --> not a great solution...
@@ -63,7 +58,7 @@ function render(questionArray) {
     const q = questionArray[i];
     let $card = $('<div class="card">');
     $card.append(`<div class="card-header"><h4 class="title is-4">${q.question}</h4></div>`);
-    let control = q.options.map( option => `<label class="radio"><input class="radio-input" type="radio" name="answer" value="${option}" data-key="${i}">${option}</label>`).join('');
+    let control = q.options.reduce((str, option) => str + `<label class="radio"><input class="radio-input" type="radio" name="answer" value="${option}" data-key="${i}">${option}</label>`);
     $card.append(`<div class="card-content"><form id="question-${i}"><div class="control">${control}</div></form></div>`)
     $('#questions').append($card);
   }

@@ -9,7 +9,10 @@ body {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  background: -webkit-linear-gradient(45deg, #9849d6, #6a3cb4);
+  background: -o-linear-gradient(45deg, #9849d6, #6a3cb4);
+  background: linear-gradient(45deg, #9849d6, #6a3cb4); }
 
 .box {
   width: 960px;
